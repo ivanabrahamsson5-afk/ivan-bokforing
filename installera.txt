@@ -1,0 +1,24 @@
+IVAN BOKFÖRING 0.1.1 – TESTVERSION
+För Apple Silicon (M1 eller senare), macOS 13 eller senare.
+Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
+
+INSTALLATION
+1. Packa upp ZIP-filen.
+2. Dra Ivan Bokföring.app till Program.
+3. Öppna appen. Ingen separat Python-installation behövs.
+
+Appen har lokal ad-hoc-signatur, men saknar Apple Developer ID och är inte notariserad. macOS kan därför stoppa starten. Om du är helt säker på att du fått just denna app från en betrodd avsändare kan du, efter startförsöket, följa Apples anvisningar under Systeminställningar > Integritet och säkerhet > Öppna ändå. Stäng inte av Gatekeeper. Vid varning om skadlig eller skadad app: avbryt och kontakta avsändaren.
+Apples anvisningar: https://support.apple.com/sv-se/102445
+
+EGNA UPPGIFTER
+Leveransen innehåller endast programmet och denna guide, inga personliga bokföringsdata eller anslutningsuppgifter. Första starten skapar en tom profil för din Mac-användare:
+~/Library/Application Support/Ivan Bokföring/
+Databas och dokument sparas där, utanför appen. Anslutningar konfigureras separat och sparas i din egen Nyckelring. Gmail kräver en separat godkänd OAuth-konfiguration; avsändarens Google-testklient är inte inkluderad och ger inte automatiskt andra användare tillgång.
+
+UPPDATERINGAR
+Automatiska uppdateringar är inte färdiga. Avsluta programmet och byt appen i Program när du får en ny kompatibel version. Behåll datamappen och säkerhetskopiera dina data före versionsbyte. Programfilen kan ersättas utan att radera egna data. Nedgradering till äldre databasschema stöds inte.
+
+Börja med påhittade uppgifter när du provar testversionen. Rapportera Mac-modell, macOS-version och eventuella fel till avsändaren.
+
+NYTT I 0.1.1
+Före en databasuppgradering skapas en verifierad säkerhetskopia av databas och dokument i datamappens backups-mapp. Uppgraderingen provas i en separat databas innan filbytet. Om backup eller migration misslyckas stoppas starten. Säkerhetskopiorna raderas inte automatiskt; tillräckligt ledigt diskutrymme krävs. Detta ersätter inte regelbunden extern säkerhetskopiering.

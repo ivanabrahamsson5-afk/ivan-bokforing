@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ladda ned testversionen av Ivan Bokföring för Mac. Systemkrav, installation och manuella uppdateringar.">
+  <meta name="color-scheme" content="light">
+  <title>Ivan Bokföring – testversion för Mac</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">För Mac · Apple Silicon</p>
+      <h1>Ivan Bokföring</h1>
+      <p class="intro">Ett lokalt bokföringsprogram med fakturor, kvitton och rapporter. Dina bokföringsuppgifter sparas på din Mac.</p>
+    </header>
+    <section class="release" aria-labelledby="download-title">
+      <p class="status">Testversion 0.1.1</p>
+      <h2 id="download-title">Prova med påhittade uppgifter</h2>
+      <p>Det här är en testleverans. Appen har lokal ad-hoc-signatur, men saknar Apple Developer ID och är inte notariserad. macOS kan därför stoppa starten.</p>
+      <p><strong>Kräver Apple Silicon (M1 eller senare) och macOS 13 eller senare.</strong> Ingen separat Python-installation behövs. Annan Mac och macOS 13 har ännu inte körtestats.</p>
+      <a class="button" href="https://github.com/ivanabrahamsson5-afk/ivan-bokforing/releases/download/v0.1.1-test/Ivan-Bokforing-0.1.1-test-arm64.zip" download>Ladda ned testversionen <span>38,5 MB · ZIP</span></a>
+      <p class="small"><a href="installera.txt">Läs installationsguiden</a> · <a href="SHA256SUMS.txt">Filens SHA-256</a></p>
+    </section>
+    <section aria-labelledby="install-title">
+      <h2 id="install-title">Installera</h2>
+      <ol>
+        <li>Packa upp ZIP-filen.</li>
+        <li>Dra <strong>Ivan Bokföring.app</strong> till <strong>Program</strong>.</li>
+        <li>Öppna appen och börja med påhittade uppgifter.</li>
+      </ol>
+      <p>Om macOS stoppar starten: följ <a href="https://support.apple.com/sv-se/102445" rel="noreferrer">Apples anvisningar</a> bara om du litar på avsändaren. Stäng inte av Gatekeeper. Vid varning om skadlig eller skadad app, avbryt och kontakta avsändaren.</p>
+      <p>Leveransen innehåller inga personliga bokföringsdata eller anslutningsuppgifter. Gmail kräver egen godkänd OAuth-konfiguration.</p>
+    </section>
+    <section aria-labelledby="update-title">
+      <h2 id="update-title">Uppdatera manuellt</h2>
+      <p>Automatiska uppdateringar är inte aktiva. Säkerhetskopiera dina uppgifter, avsluta appen och ersätt programmet i Program när en ny kompatibel version finns.</p>
+      <p>Behåll datamappen <code>~/Library/Application Support/Ivan Bokföring/</code>. Databas och dokument ligger utanför appen. Nedgradering till äldre databasschema stöds inte.</p>
+    </section>
+    <footer>
+      <p>Sidan använder inga spårningsskript, externa typsnitt eller kakor. Webbhotellet kan föra åtkomstloggar. Appfilen hämtas bara när du väljer att ladda ned den.</p>
+    </footer>
+  </main>
+</body>
+</html>
