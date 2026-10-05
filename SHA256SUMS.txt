@@ -1,1 +1,1 @@
-2d12fdffe14cf211572cc14874f477486d8798c90e6340b10de678ed866d4e98  Ivan-Bokforing-0.1.1-test-arm64.zip
+a847d411ea6653859037cbf9d9c7a8124df98619723a4f010d55f0fa37f1fe0e  Ivan-production-test-3.zip

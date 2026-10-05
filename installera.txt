@@ -1,4 +1,4 @@
-IVAN BOKFÖRING 0.1.1 – TESTVERSION
+IVAN BOKFÖRING 0.1.2 – TESTVERSION
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
 Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
 
@@ -16,9 +16,9 @@ Leveransen innehåller endast programmet och denna guide, inga personliga bokfö
 Databas och dokument sparas där, utanför appen. Anslutningar konfigureras separat och sparas i din egen Nyckelring. Gmail kräver en separat godkänd OAuth-konfiguration; avsändarens Google-testklient är inte inkluderad och ger inte automatiskt andra användare tillgång.
 
 UPPDATERINGAR
-Automatiska uppdateringar är inte färdiga. Avsluta programmet och byt appen i Program när du får en ny kompatibel version. Behåll datamappen och säkerhetskopiera dina data före versionsbyte. Programfilen kan ersättas utan att radera egna data. Nedgradering till äldre databasschema stöds inte.
+Denna version innehåller uppdateringsklienten. När den signerade uppdateringslistan är publicerad kontrollerar appen normalt dagligen, hämtar i bakgrunden och installerar när du avslutar. 0.1.1 behöver ersättas manuellt en första gång. Menyn Sök efter uppdateringar kan användas för att kontrollera direkt. Behåll datamappen och säkerhetskopiera dina data före versionsbyte. Programfilen kan ersättas utan att radera egna data. Nedgradering till äldre databasschema stöds inte.
 
 Börja med påhittade uppgifter när du provar testversionen. Rapportera Mac-modell, macOS-version och eventuella fel till avsändaren.
 
-NYTT I 0.1.1
+NYTT I 0.1.2
 Före en databasuppgradering skapas en verifierad säkerhetskopia av databas och dokument i datamappens backups-mapp. Uppgraderingen provas i en separat databas innan filbytet. Om backup eller migration misslyckas stoppas starten. Säkerhetskopiorna raderas inte automatiskt; tillräckligt ledigt diskutrymme krävs. Detta ersätter inte regelbunden extern säkerhetskopiering.
