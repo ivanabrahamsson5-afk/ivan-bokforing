@@ -1,4 +1,4 @@
-IVAN BOKFÖRING 0.1.3 – TESTVERSION
+IVAN BOKFÖRING 0.1.4 – TESTVERSION
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
 Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
 
@@ -28,3 +28,8 @@ Befintliga 0 %-kundfakturor kan granskas och bokföras efter uttrycklig bekräft
 Kundfakturor från original-PDF kan importeras i flera granskningsflikar. Leverantörsfakturor kan läsas i flera flikar. Avlästa uppgifter måste kontrolleras; betalning och bokföring görs separat.
 Beskrivningsfältet öppnar sparade förslag vid klick, med Annat för egen text. Versionsnumret visas under appnamnet. Markera som betald är grön när vald faktura kan betalas, och Betalat med syns i det betalda leverantörsformuläret.
 Databasschema är fortsatt 26, utan ny migration. Använd denna version för de nya importoriginalen och klassificeringsuppgifterna; återgå inte till en äldre app för att behandla dem.
+
+NYTT I 0.1.4
+Avlästa PDF-uppgifter fylls i direkt och måste granskas, med originalvisning, zoom och säkrare beloppskontroller. Befintliga oanvända fakturor med saknade frysta avsändaruppgifter kan kompletteras efter granskning utan nytt fakturanummer; redan använda fakturor spärras. Nya fakturor får kontroll av avsändaruppgifter före färdigställande.
+Snabbkunder kan kompletteras direkt. PDF, Gmail-utskick, betalning och bokföring visas separat. Anslutet Gmail ger en enklare skickavy med Hantera Gmail och guide. Översikten skiljer förfallna fakturor från vanliga kontrollärenden. Vid avslut erbjuds Spara utkast, Lämna utan att spara och Fortsätt redigera. Macens systemfilväljare används. Beskrivningsförslag öppnas efter ett vanligt klick och släpp.
+486 tester passerade med fiktiva uppgifter. Production- och utvecklingspaket kontrollerade separat. Systemfilväljaren och beskrivningsklick har provats på denna Mac; övrig layout är främst visuellt granskad via Qt offscreen. Inga riktiga mejl har skickats i tester. Databasschema fortsatt 26.
