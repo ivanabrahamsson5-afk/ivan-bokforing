@@ -4,16 +4,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Ivan Bokföring</title>
         <item>
-            <title>0.1.3</title>
-            <pubDate>Mon, 05 Oct 2026 14:52:37 +0200</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <title>0.1.4</title>
+            <pubDate>Thu, 08 Oct 2026 18:28:54 +0200</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/ivanabrahamsson5-afk/ivan-bokforing/releases/download/v0.1.3-test/Ivan-production-test-4.zip" length="39539235" type="application/octet-stream" sparkle:edSignature="a9/lFskVCn/5slcDqa0EewZqmQZDgWxkBE1ffd3w2pqMgrkyxuO3nBHGa5fQ/mtr765tHtP72WuKFRWCZ3OPBQ=="></enclosure>
+            <enclosure url="https://github.com/ivanabrahamsson5-afk/ivan-bokforing/releases/download/v0.1.4-test/Ivan-production-test-5.zip" length="39780055" type="application/octet-stream" sparkle:edSignature="0HZOY5lSrEQf+4DXgv0nUbk4CdMvF8FHD20hTsVn2jG2MK2U+gYKSwimQn7sSWmK8Z5Kjq2/xxN5YdtXRthtDw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: tu4Y3r4nWZY9tFYchazy0lPEZ1/DtstDzSlDqifBNxlZUqUZbfeMGLzioH8twSP9FwfbTM0ehdUyL00mtY6DAA==
+edSignature: LQImOtW0kTVAvd76RkuWZBvkX+6+D6ObJAZUZ6rlGJnvJ20rQgCl9rgTvVgc4Tp+3lUD8/Dc5d6ZdNLyzc1+Ag==
 length: 1159
 -->
