@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Koppla Gmail till Ivan Bokföring. Tydliga steg för Google-projekt, Desktop-klientfil och anslutning på din Mac.">
+  <meta name="color-scheme" content="light">
+  <title>Koppla Gmail – steg för steg · Ivan Bokföring</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+  <a class="skip-link" href="#guide">Hoppa till guiden</a>
+  <div class="site-layout">
+    <nav class="site-nav" aria-label="Hemsidans flikar">
+      <strong>Ivan Bokföring</strong>
+      <a href="index.html">Ladda ned programmet</a>
+      <a href="gmail.html" aria-current="page">Koppla Gmail</a>
+      <div class="step-links" aria-label="Gå till steg">
+        <a href="#borja">Innan du börjar</a>
+        <a href="#projekt">1. Google-projekt</a>
+        <a href="#api">2. Aktivera Gmail</a>
+        <a href="#appnamn">3. Appens namn</a>
+        <a href="#testanvandare">4. Testanvändare</a>
+        <a href="#behorigheter">5. Behörigheter</a>
+        <a href="#klientfil">6. Hämta klientfil</a>
+        <a href="#anslut">7. Anslut i appen</a>
+        <a href="#klart">8. Kontrollera</a>
+        <a href="#problem">Om det tar stopp</a>
+      </div>
+    </nav>
+    <main id="guide">
+      <header>
+        <p class="eyebrow">Hjälp för Mac · Gmail</p>
+        <h1>Koppla Gmail,<br>steg för steg</h1>
+        <p class="intro">Gör detta en gång för att kunna skicka fakturor från din Gmail-adress. Börja hos Google, hämta en klientfil och välj den i Ivan Bokföring.</p>
+        <p class="small">Kontrollerad mot Googles anvisningar 8 oktober 2026. Google-bilderna är riktiga skärmbilder med privata delar utanför bildutsnittet; appbilderna visar en separat testmiljö. Google kan visa svenska eller engelska namn på knapparna.</p>
+      </header>
+      <section class="release" id="borja">
+        <h2>Innan du börjar</h2>
+        <p>Ha Gmail-kontot och Ivan Bokföring till hands. Ingen programmering, Terminal eller separat Python-installation behövs.</p>
+        <p><strong>Klientfilen är en fil som slutar på .json.</strong> Den hämtas från Google och väljs på din Mac. Du ska inte skriva in Gmail-lösenordet i bokföringsprogrammet eller ladda upp filen på den här hemsidan.</p>
+        <p>Har du redan en Desktop-klientfil? <a href="#anslut">Hoppa direkt till steg 7.</a> Har du redan ett projekt? Välj det och kontrollera steg 2–6.</p>
+      </section>
+      <section class="step" id="projekt">
+        <p class="step-number">Steg 1 av 8 · Google</p>
+        <h2>Välj eller skapa ditt Google-projekt</h2>
+        <a class="button" href="https://console.cloud.google.com/" target="_blank" rel="noopener noreferrer">Öppna Google Cloud ↗</a>
+        <ol>
+          <li>Logga in med kontot som ska äga projektet.</li>
+          <li>Klicka på projektväljaren högst upp. Välj ditt befintliga Gmail-projekt, eller välj <strong>New project / Nytt projekt</strong>.</li>
+          <li>För ett nytt projekt: ange exempelvis <strong>Ivan Bokföring Gmail</strong>, skapa det och välj det i projektväljaren.</li>
+        </ol>
+        <p>Om en välkomstsida visas behöver du själv läsa och ta ställning till Googles villkor. Guiden kräver inte att du startar en betalprenumeration eller en gratis provperiod.</p>
+        <p class="ready"><strong>Klart när:</strong> ditt projekt är valt högst upp. Kontrollera att samma projekt är valt i alla följande Google-steg.</p>
+      </section>
+      <section class="step" id="api">
+        <p class="step-number">Steg 2 av 8 · Google</p>
+        <h2>Aktivera Gmail API</h2>
+        <a class="button" href="https://console.cloud.google.com/apis/library/gmail.googleapis.com" target="_blank" rel="noopener noreferrer">Öppna Gmail API ↗</a>
+        <ol>
+          <li>Kontrollera projektet högst upp.</li>
+          <li>Klicka på <strong>Enable / Aktivera</strong>.</li>
+          <li>Om du redan ser <strong>Manage / Hantera</strong> är tjänsten aktiverad och du kan gå vidare.</li>
+        </ol>
+        <figure><a href="gmail-google-gmail-api.jpg"><img src="gmail-google-gmail-api.jpg" alt="Gmail API visar Manage och API Enabled." loading="lazy"></a><figcaption>Så ser det ut när Gmail API redan är aktiverat. För ett nytt projekt väljer du Enable. Klicka på bilden för större visning.</figcaption></figure>
+        <p class="ready"><strong>Klart när:</strong> Gmail API är aktiverat i ditt projekt.</p>
+      </section>
+      <section class="step" id="appnamn">
+        <p class="step-number">Steg 3 av 8 · Google</p>
+        <h2>Fyll i appens namn och kontakt</h2>
+        <a class="button" href="https://console.cloud.google.com/auth/branding" target="_blank" rel="noopener noreferrer">Öppna Branding ↗</a>
+        <ol>
+          <li>Under <strong>Google Auth Platform → Branding</strong>, klicka på <strong>Get started / Kom igång</strong> om inställningen är ny.</li>
+          <li>Ange ett tydligt appnamn, exempelvis <strong>Ivan Bokföring – min Gmail</strong>.</li>
+          <li>Välj din adress som supportadress och ange kontaktadress när Google frågar.</li>
+          <li>För ett vanligt privat Gmail-konto: välj <strong>External / Extern</strong> när Google frågar om målgrupp. <strong>Internal</strong> är för en Google Workspace-organisation.</li>
+          <li>Läs eventuella villkor och slutför inställningen om du accepterar dem. Har projektet redan dessa uppgifter behöver du inte skapa om det.</li>
+        </ol>
+        <figure class="menu-image"><a href="gmail-google-meny.jpg"><img src="gmail-google-meny.jpg" alt="Google Auth Platform med menyalternativen Branding, Audience, Clients och Data access." loading="lazy"></a><figcaption>Här finns Google-menyn du använder i steg 3–6. Klicka på bilden för större visning.</figcaption></figure>
+        <p class="ready"><strong>Klart när:</strong> appnamn och kontakt är sparade och menyn visar Audience, Clients och Data access.</p>
+      </section>
+      <section class="step" id="testanvandare">
+        <p class="step-number">Steg 4 av 8 · Google</p>
+        <h2>Lägg till adressen du ska skicka från</h2>
+        <a class="button" href="https://console.cloud.google.com/auth/audience" target="_blank" rel="noopener noreferrer">Öppna Audience ↗</a>
+        <ol>
+          <li>För den här testanslutningen: behåll <strong>Testing / Testning</strong>.</li>
+          <li>Under <strong>Test users / Testanvändare</strong>, välj <strong>Add users / Lägg till användare</strong>.</li>
+          <li>Ange Gmail-adressen som du ska ansluta i programmet och spara. Om fler personer ska ansluta till samma testklient måste deras adresser också vara tillagda.</li>
+        </ol>
+        <p>I testläge kan Google kräva att du ansluter igen efter sju dagar. Det är inte samma sak som att projektet eller klientfilen måste skapas om.</p>
+        <figure><a href="gmail-google-audience.jpg"><img src="gmail-google-audience.jpg" alt="Audience visar Publishing status Testing och User type External." loading="lazy"></a><figcaption>Kontrollera Testing och External. Längre ned på sidan finns Test users och Add users. Klicka på bilden för större visning.</figcaption></figure>
+        <p class="ready"><strong>Klart när:</strong> din avsändaradress finns bland testanvändarna.</p>
+      </section>
+      <section class="step" id="behorigheter">
+        <p class="step-number">Steg 5 av 8 · Google</p>
+        <h2>Välj behörigheterna programmet använder</h2>
+        <a class="button" href="https://console.cloud.google.com/auth/scopes" target="_blank" rel="noopener noreferrer">Öppna Data access ↗</a>
+        <p>Välj <strong>Add or remove scopes / Lägg till eller ta bort behörigheter</strong>. Sök efter och lägg till dessa tre, eller använd inmatningen för manuella scopes om Google visar den:</p>
+        <pre><code>https://www.googleapis.com/auth/gmail.send
+openid
+https://www.googleapis.com/auth/userinfo.email</code></pre>
+        <p>Spara valet. <strong>gmail.send</strong> används för att skicka mejl; de andra visar vilket konto som är avsändare. Ivan Bokföring begär inte åtkomst för att läsa eller radera inkorgen.</p>
+        <figure><a href="gmail-google-scopes.jpg"><img src="gmail-google-scopes.jpg" alt="Data access med Add or remove scopes samt openid, userinfo.email och gmail.send." loading="lazy"></a><figcaption>Knappen Add or remove scopes öppnar valet. Dessa tre scopes motsvarar programmets behörigheter. Klicka på bilden för större visning.</figcaption></figure>
+        <p class="ready"><strong>Klart när:</strong> de tre behörigheterna är tillagda.</p>
+      </section>
+      <section class="step" id="klientfil">
+        <p class="step-number">Steg 6 av 8 · Google</p>
+        <h2>Skapa Desktop-klienten och hämta JSON-filen</h2>
+        <a class="button" href="https://console.cloud.google.com/auth/clients" target="_blank" rel="noopener noreferrer">Öppna Clients ↗</a>
+        <ol>
+          <li>Välj <strong>Create client / Skapa klient</strong>.</li>
+          <li>Välj <strong>Desktop app / Datorapp</strong> som applikationstyp. Välj inte Web application, API key eller Service account.</li>
+          <li>Ange ett namn, exempelvis <strong>Ivan på Mac</strong>, och klicka på <strong>Create / Skapa</strong>.</li>
+          <li>Hämta klientens <strong>JSON-fil</strong> med nedladdningsknappen. Den kan finnas i skapandedialogen eller på klientens detaljsida.</li>
+          <li>Låt filen ligga på en plats du hittar, exempelvis <strong>Hämtade filer</strong>. Filnamnet kan börja med <strong>client_secret_</strong> och ska sluta på <strong>.json</strong>. Du behöver inte döpa om eller öppna filen.</li>
+        </ol>
+        <figure><a href="gmail-google-clients.jpg"><img src="gmail-google-clients.jpg" alt="Clients med knappen Create client." loading="lazy"></a><figcaption>Börja med Create client i klientvyn. Klicka på bilden för större visning.</figcaption></figure><figure><a href="gmail-google-desktop.jpg"><img src="gmail-google-desktop.jpg" alt="Application type med Desktop app vald." loading="lazy"></a><figcaption>Välj Desktop app i listan, inte Web application. Klicka på bilden för större visning.</figcaption></figure>
+        <p class="ready"><strong>Klart när:</strong> en .json-fil finns på din Mac.</p>
+      </section>
+      <section class="step" id="anslut">
+        <p class="step-number">Steg 7 av 8 · Ivan Bokföring</p>
+        <h2>Välj klientfilen i programmet</h2>
+        <ol>
+          <li>Öppna <strong>Inställningar → Företag</strong>.</li>
+          <li>Klicka på <strong>Hantera sparade SCB- och Gmail-anslutningar…</strong>.</li>
+          <li>Under Gmail: klicka på <strong>Anslut Gmail…</strong>.</li>
+          <li>I filväljaren: öppna <strong>Hämtade filer</strong>, välj din .json-fil och öppna den.</li>
+          <li>Google öppnas i webbläsaren. Välj samma Gmail-adress som du lade till som testanvändare och granska vilka behörigheter appen begär.</li>
+          <li>Om du godkänner behörigheterna, slutför Googles anslutning och gå tillbaka till programmet.</li>
+        </ol>
+        <figure><a href="gmail-app-installningar.png"><img src="gmail-app-installningar.png" alt="Företagsinställningarna med knappen Hantera sparade SCB- och Gmail-anslutningar." loading="lazy"></a><figcaption>Så hittar du anslutningarna under Inställningar och Företag. Bilden använder påhittade företagsuppgifter. Klicka på bilden för större visning.</figcaption></figure>
+        <p>Du kan också ansluta i fakturans <strong>Skicka…</strong>-dialog. Att ansluta Gmail skickar inget mejl. Om du ska byta klientfil använder du <strong>Välj annan OAuth-klientfil…</strong>.</p>
+        <figure><a href="gmail-app-anslutningar.png"><img src="gmail-app-anslutningar.png" alt="Anslutningsdialogen i Ivan Bokföring med Gmail-guiden och knappen Anslut Gmail." loading="lazy"></a><figcaption>Appens anslutningsdialog, renderad med en separat testmiljö utan riktiga anslutningar. Klicka på bilden för större visning.</figcaption></figure>
+      </section>
+      <section class="step" id="klart">
+        <p class="step-number">Steg 8 av 8 · Kontrollera</p>
+        <h2>Kontrollera att rätt adress är ansluten</h2>
+        <p>Programmet ska visa din Gmail-adress och att anslutningen är sparad eller ansluten. Klientinställning och förnyelsebehörighet sparas i macOS Nyckelring för denna installation.</p>
+        <p>När du vill skicka en faktura: välj en färdigställd faktura, öppna <strong>Skicka…</strong> och kontrollera Från, Till, ämne, text och PDF. Mejlet skickas först när du granskat och tryckt på <strong>Skicka via Gmail</strong>.</p>
+        <p class="ready"><strong>Klart!</strong> Du behöver normalt inte välja klientfilen igen. En annan Mac eller separat utvecklingsinstallation behöver sin egen anslutning.</p>
+      </section>
+      <section id="problem">
+        <h2>Om det tar stopp</h2>
+        <details><summary>Google säger att åtkomsten är blockerad</summary><p>Kontrollera projektet och steg 4: finns exakt den adress du loggar in med bland testanvändarna? För ett arbets- eller skolkonto kan administratören också begränsa anslutningar.</p></details>
+        <details><summary>Google visar att appen inte är verifierad</summary><p>En egen testklient kan ge en sådan varning. Kontrollera att appnamn, projekt och efterfrågade behörigheter är de du avser. Fortsätt inte med en okänd app eller oväntade behörigheter. En blockering kan kräva ändringar hos Google eller hjälp från administratören.</p></details>
+        <details><summary>Programmet säger att klientfilen är fel</summary><p>Hämta JSON från en klient av typen Desktop app enligt steg 6. En API-nyckel, Web application-klient eller servicekontofil fungerar inte. Välj den riktiga .json-filen, inte en bild eller ZIP.</p></details>
+        <details><summary>Gmail fungerade förra veckan men behöver anslutas igen</summary><p>För External med Testing gäller normalt sju dagars förnyelsebehörighet när Gmail används. Klicka Anslut Gmail igen och godkänn hos Google. Programmet återanvänder sparad klientinställning.</p></details>
+        <details><summary>JSON-knappen syns inte där guiden visar den</summary><p>Google ändrar ibland gränssnittet. Öppna Clients, välj din Desktop-klient och leta efter nedladdning av JSON. Läs även Googles klientguide nedan.</p></details>
+        <details><summary>Jag vill koppla från</summary><p>Använd Koppla från och radera sparad Gmail på denna Mac i appen. Det tar bort appens lokala Gmail-anslutning. Googles övergripande samtycke kan hanteras under <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">Google-kontots anslutningar</a>.</p></details>
+      </section>
+      <footer>
+        <p>Officiella anvisningar: <a href="https://developers.google.com/workspace/gmail/api/quickstart/python">Gmail och Desktop-klient</a>, <a href="https://developers.google.com/workspace/guides/configure-oauth-consent">målgrupp och testanvändare</a>, <a href="https://developers.google.com/workspace/guides/create-credentials">klienttyper</a>, <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Gmail-behörigheter</a> och <a href="https://developers.google.com/identity/protocols/oauth2#expiration">förnyelsebehörighetens livslängd</a>.</p>
+        <p>Guiden samlar inte in klientfiler eller inloggningar. Inga spårningsskript, externa typsnitt eller kakor används på hemsidan. Google-länkar öppnar Googles egna tjänster.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
