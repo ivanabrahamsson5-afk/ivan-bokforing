@@ -1,4 +1,4 @@
-IVAN BOKFÖRING 0.1.4 – TESTVERSION
+IVAN BOKFÖRING 0.1.5 – TESTVERSION
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
 Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
 
@@ -33,3 +33,8 @@ NYTT I 0.1.4
 Avlästa PDF-uppgifter fylls i direkt och måste granskas, med originalvisning, zoom och säkrare beloppskontroller. Befintliga oanvända fakturor med saknade frysta avsändaruppgifter kan kompletteras efter granskning utan nytt fakturanummer; redan använda fakturor spärras. Nya fakturor får kontroll av avsändaruppgifter före färdigställande.
 Snabbkunder kan kompletteras direkt. PDF, Gmail-utskick, betalning och bokföring visas separat. Anslutet Gmail ger en enklare skickavy med Hantera Gmail och guide. Översikten skiljer förfallna fakturor från vanliga kontrollärenden. Vid avslut erbjuds Spara utkast, Lämna utan att spara och Fortsätt redigera. Macens systemfilväljare används. Beskrivningsförslag öppnas efter ett vanligt klick och släpp.
 486 tester passerade med fiktiva uppgifter. Production- och utvecklingspaket kontrollerade separat. Systemfilväljaren och beskrivningsklick har provats på denna Mac; övrig layout är främst visuellt granskad via Qt offscreen. Inga riktiga mejl har skickats i tester. Databasschema fortsatt 26.
+
+NYTT I 0.1.5
+Årskontrollen stoppar obetalda leverantörsfakturor utan fakturadatum så att de inte utelämnas. Saknat datum kan kompletteras mot originalet på samma befintliga registrering; nummer, belopp, betalning och original bevaras. Datum gissas inte från förfallodagen.
+Nya fullständiga kundfakturor ber om saknad kundadress före färdigställande. Avbryt behåller utkastet och reserverar inget nummer. Snabbkund med bara namn för utkast/import finns kvar. E-post och organisationsnummer är frivilliga för PDF. Äldre fakturors frysta uppgifter skrivs inte om.
+500 tester passerade med fiktiva uppgifter. Mac-gränssnitt och båda app-profilerna är paketprovade med PDF, komplettering, backup och återställning. Kalenderårsprov täcker bokslut och nästa års betalningar utan dubbel moms. Databasschema fortsatt 26. Annan Mac, Intel och lägsta macOS 13 är inte körtestade.
