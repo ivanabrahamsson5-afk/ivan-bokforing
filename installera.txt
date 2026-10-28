@@ -1,4 +1,4 @@
-IVAN BOKFÖRING 0.1.5 – TESTVERSION
+IVAN BOKFÖRING 0.1.6 – TESTVERSION
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
 Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
 
@@ -38,3 +38,10 @@ NYTT I 0.1.5
 Årskontrollen stoppar obetalda leverantörsfakturor utan fakturadatum så att de inte utelämnas. Saknat datum kan kompletteras mot originalet på samma befintliga registrering; nummer, belopp, betalning och original bevaras. Datum gissas inte från förfallodagen.
 Nya fullständiga kundfakturor ber om saknad kundadress före färdigställande. Avbryt behåller utkastet och reserverar inget nummer. Snabbkund med bara namn för utkast/import finns kvar. E-post och organisationsnummer är frivilliga för PDF. Äldre fakturors frysta uppgifter skrivs inte om.
 500 tester passerade med fiktiva uppgifter. Mac-gränssnitt och båda app-profilerna är paketprovade med PDF, komplettering, backup och återställning. Kalenderårsprov täcker bokslut och nästa års betalningar utan dubbel moms. Databasschema fortsatt 26. Annan Mac, Intel och lägsta macOS 13 är inte körtestade.
+
+NYTT I 0.1.6
+Bokföring > 4. Tidigare år samlar tidigare fordringar och skulder med original, ingående balans och spårbara full-, del- och samlingsbetalningar. Befintliga fakturor och original kan återanvändas. Regleringen skapar inte samma intäkt, kostnad eller moms igen. Rätt bokförda betalningar kan kopplas i efterhand efter granskning; felaktiga bokningar behöver separat rättelse. Historiska regleringar stöder SEK utan avgifts- eller kursdifferenser.
+Kvitton läses lokalt direkt efter filval, med flera granskningsflikar, separat felhantering, dubblettkontroll och skydd för egna ändringar. Flera sidor kan grupperas till ett kvitto; beloppen summeras inte automatiskt. PDF med flera olika kvitton behöver delas före import.
+Kontofält öppnar en sökbar lista vid klick. Banknamn, clearing och kontonummer har egna fält som bevarar inledande nollor. Ofullständiga resor kan sparas, och körjournalshänvisning kan användas inför bokföring. Leverantörsnamn behöver inte skrivas av igen när motpart och original uttryckligen har granskats.
+Databasen uppgraderas från schema 26 till 28 vid första start, efter verifierad automatisk säkerhetskopia. Befintliga fakturor och frysta uppgifter bevaras. Tillräckligt diskutrymme krävs. Öppna inte den uppgraderade databasen i en äldre app.
+Mac-gränssnitt, PDF/PNG-avläsning, migration, delbetalning och backup/återställning är provade med fiktiva uppgifter. Inga användardata eller riktiga anslutningar ingår i testerna. OCR och bokföringsförslag ska alltid granskas före bokföring. Annan Mac, Intel och macOS 13 är inte körtestade.
