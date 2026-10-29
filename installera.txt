@@ -1,4 +1,10 @@
-IVAN BOKFÖRING 0.1.6 – TESTVERSION
+IVAN BOKFÖRING 0.1.7 – TESTVERSION
+
+Senare originaldatum för tidigare leverantörsskulder kan nu granskas separat från bokslut 2025 och ingående saldo 2026-01-01. Befintliga fakturor återanvänds. Även redan reglerade poster kan kompletteras spårbart, med original och betalningar bevarade. Bokförd tillräcklig IB och uttrycklig momsgranskning krävs; oklar moms stoppar reglering och bokslut. Ingen ny kostnad eller moms skapas av kompletteringen.
+
+Databasen uppgraderas till schema 29 efter verifierad automatisk säkerhetskopia. Äldre appar kan inte öppna den uppgraderade databasen. Behåll datamappen och ha ledigt diskutrymme.
+
+Installationsanvisningar
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
 Byggd och lokalt kontrollerad på utvecklarens Mac. Annan Mac och macOS 13 har inte körtestats. Detta är en kontrollerad testleverans, inte en verifierad produktionsrelease.
 
@@ -23,25 +29,3 @@ Börja med påhittade uppgifter när du provar testversionen. Rapportera Mac-mod
 NYTT I 0.1.2
 Före en databasuppgradering skapas en verifierad säkerhetskopia av databas och dokument i datamappens backups-mapp. Uppgraderingen provas i en separat databas innan filbytet. Om backup eller migration misslyckas stoppas starten. Säkerhetskopiorna raderas inte automatiskt; tillräckligt ledigt diskutrymme krävs. Detta ersätter inte regelbunden extern säkerhetskopiering.
 
-NYTT I 0.1.3
-Befintliga 0 %-kundfakturor kan granskas och bokföras efter uttrycklig bekräftelse av momsfritt artistframträdande i Sverige. Originalnummer, belopp och PDF bevaras. Andra momsfall behöver separat bedömning.
-Kundfakturor från original-PDF kan importeras i flera granskningsflikar. Leverantörsfakturor kan läsas i flera flikar. Avlästa uppgifter måste kontrolleras; betalning och bokföring görs separat.
-Beskrivningsfältet öppnar sparade förslag vid klick, med Annat för egen text. Versionsnumret visas under appnamnet. Markera som betald är grön när vald faktura kan betalas, och Betalat med syns i det betalda leverantörsformuläret.
-Databasschema är fortsatt 26, utan ny migration. Använd denna version för de nya importoriginalen och klassificeringsuppgifterna; återgå inte till en äldre app för att behandla dem.
-
-NYTT I 0.1.4
-Avlästa PDF-uppgifter fylls i direkt och måste granskas, med originalvisning, zoom och säkrare beloppskontroller. Befintliga oanvända fakturor med saknade frysta avsändaruppgifter kan kompletteras efter granskning utan nytt fakturanummer; redan använda fakturor spärras. Nya fakturor får kontroll av avsändaruppgifter före färdigställande.
-Snabbkunder kan kompletteras direkt. PDF, Gmail-utskick, betalning och bokföring visas separat. Anslutet Gmail ger en enklare skickavy med Hantera Gmail och guide. Översikten skiljer förfallna fakturor från vanliga kontrollärenden. Vid avslut erbjuds Spara utkast, Lämna utan att spara och Fortsätt redigera. Macens systemfilväljare används. Beskrivningsförslag öppnas efter ett vanligt klick och släpp.
-486 tester passerade med fiktiva uppgifter. Production- och utvecklingspaket kontrollerade separat. Systemfilväljaren och beskrivningsklick har provats på denna Mac; övrig layout är främst visuellt granskad via Qt offscreen. Inga riktiga mejl har skickats i tester. Databasschema fortsatt 26.
-
-NYTT I 0.1.5
-Årskontrollen stoppar obetalda leverantörsfakturor utan fakturadatum så att de inte utelämnas. Saknat datum kan kompletteras mot originalet på samma befintliga registrering; nummer, belopp, betalning och original bevaras. Datum gissas inte från förfallodagen.
-Nya fullständiga kundfakturor ber om saknad kundadress före färdigställande. Avbryt behåller utkastet och reserverar inget nummer. Snabbkund med bara namn för utkast/import finns kvar. E-post och organisationsnummer är frivilliga för PDF. Äldre fakturors frysta uppgifter skrivs inte om.
-500 tester passerade med fiktiva uppgifter. Mac-gränssnitt och båda app-profilerna är paketprovade med PDF, komplettering, backup och återställning. Kalenderårsprov täcker bokslut och nästa års betalningar utan dubbel moms. Databasschema fortsatt 26. Annan Mac, Intel och lägsta macOS 13 är inte körtestade.
-
-NYTT I 0.1.6
-Bokföring > 4. Tidigare år samlar tidigare fordringar och skulder med original, ingående balans och spårbara full-, del- och samlingsbetalningar. Befintliga fakturor och original kan återanvändas. Regleringen skapar inte samma intäkt, kostnad eller moms igen. Rätt bokförda betalningar kan kopplas i efterhand efter granskning; felaktiga bokningar behöver separat rättelse. Historiska regleringar stöder SEK utan avgifts- eller kursdifferenser.
-Kvitton läses lokalt direkt efter filval, med flera granskningsflikar, separat felhantering, dubblettkontroll och skydd för egna ändringar. Flera sidor kan grupperas till ett kvitto; beloppen summeras inte automatiskt. PDF med flera olika kvitton behöver delas före import.
-Kontofält öppnar en sökbar lista vid klick. Banknamn, clearing och kontonummer har egna fält som bevarar inledande nollor. Ofullständiga resor kan sparas, och körjournalshänvisning kan användas inför bokföring. Leverantörsnamn behöver inte skrivas av igen när motpart och original uttryckligen har granskats.
-Databasen uppgraderas från schema 26 till 28 vid första start, efter verifierad automatisk säkerhetskopia. Befintliga fakturor och frysta uppgifter bevaras. Tillräckligt diskutrymme krävs. Öppna inte den uppgraderade databasen i en äldre app.
-Mac-gränssnitt, PDF/PNG-avläsning, migration, delbetalning och backup/återställning är provade med fiktiva uppgifter. Inga användardata eller riktiga anslutningar ingår i testerna. OCR och bokföringsförslag ska alltid granskas före bokföring. Annan Mac, Intel och macOS 13 är inte körtestade.
