@@ -1,6 +1,6 @@
-IVAN BOKFÖRING 0.1.7 – TESTVERSION
+IVAN BOKFÖRING 0.1.8 – TESTVERSION
 
-Senare originaldatum för tidigare leverantörsskulder kan nu granskas separat från bokslut 2025 och ingående saldo 2026-01-01. Befintliga fakturor återanvänds. Även redan reglerade poster kan kompletteras spårbart, med original och betalningar bevarade. Bokförd tillräcklig IB och uttrycklig momsgranskning krävs; oklar moms stoppar reglering och bokslut. Ingen ny kostnad eller moms skapas av kompletteringen.
+Koppla en redan bokförd ingående balans till historikflödet efter uttrycklig granskning. Välj befintlig verifikation, kontrollera raderna och ange bokslutshänvisning och granskare. Ingen ny IB skapas. Den låsta verifikationen och källutkastet behålls oförändrade. Funktionen finns under Bokföring → 4. Tidigare år → Koppla befintlig IB…
 
 Databasen uppgraderas till schema 29 efter verifierad automatisk säkerhetskopia. Äldre appar kan inte öppna den uppgraderade databasen. Behåll datamappen och ha ledigt diskutrymme.
 
