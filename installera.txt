@@ -1,8 +1,8 @@
-IVAN BOKFÖRING 0.1.8 – TESTVERSION
+IVAN BOKFÖRING 0.1.9 – TESTVERSION
 
-Koppla en redan bokförd ingående balans till historikflödet efter uttrycklig granskning. Välj befintlig verifikation, kontrollera raderna och ange bokslutshänvisning och granskare. Ingen ny IB skapas. Den låsta verifikationen och källutkastet behålls oförändrade. Funktionen finns under Bokföring → 4. Tidigare år → Koppla befintlig IB…
+Ny ljus kortdesign med fyra bokföringsflikar, tydligare sök/filter och Inställningar. Granska och bokför direkt från underlaget, även tidigare sparade fakturor och kvitton. Förbättrad originalvisning, flerfilskö med tydlig spar- och bokföringsstatus samt återgång till rätt lista. Separat körjournal kan användas som alternativ till resväg och ärende. Granskad koppling av befintlig IB bevaras utan ny IB.
 
-Databasen uppgraderas till schema 29 efter verifierad automatisk säkerhetskopia. Äldre appar kan inte öppna den uppgraderade databasen. Behåll datamappen och ha ledigt diskutrymme.
+Databasen uppgraderas till schema 31 efter verifierad automatisk säkerhetskopia. Äldre appar kan inte öppna den uppgraderade databasen. Behåll datamappen och ha ledigt diskutrymme.
 
 Installationsanvisningar
 För Apple Silicon (M1 eller senare), macOS 13 eller senare.
@@ -29,3 +29,6 @@ Börja med påhittade uppgifter när du provar testversionen. Rapportera Mac-mod
 NYTT I 0.1.2
 Före en databasuppgradering skapas en verifierad säkerhetskopia av databas och dokument i datamappens backups-mapp. Uppgraderingen provas i en separat databas innan filbytet. Om backup eller migration misslyckas stoppas starten. Säkerhetskopiorna raderas inte automatiskt; tillräckligt ledigt diskutrymme krävs. Detta ersätter inte regelbunden extern säkerhetskopiering.
 
+
+KÄND BEGRÄNSNING
+Tidigare observerad tillgänglighetskrasch (NSAccessibility) är inte bevisat löst. Native Mac-prov har passerat men bevisar inte att kraschen är borta.
